@@ -35,7 +35,7 @@ function draw(){
                 objectDetector.detect(gotResult);
                 document.getElementById("status").innerHTML = object_name + "Found";
                 synth = window.speechSynthesis;
-                utterThis = new.speechSynthesisUtterance(object_name + "Found");
+                var utterThis = new SpeechSynthesisUtterance(object_name + "Found");
                 synth.speak(utterThis);
             }
             else{
